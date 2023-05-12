@@ -13,7 +13,7 @@ p = pathlib.Path(__file__).parent.parent.joinpath("README.md")
 def get_file_list():
     file_list = ""
     with open(p, "rb") as f:
-        for line in f.readlines():
+        for line in f:
             file_list += line.rstrip().decode()
     return file_list
 
